@@ -6,19 +6,47 @@
 </head>
 <body>
 
-<h1>Correct Answer 🎉</h1>
+<h1 id="title">Chocolate Result 🍫</h1>
 
-<p style="font-size:1.4rem;">
-YOU 🫶<br><br>
-Sweeter than chocolate,<br>
-cuter than hamsters,<br>
-and the only one I want 💖
-</p>
+<p id="message" style="font-size:1.4rem;"></p>
 
 <p style="margin-top:30px;">
 Happy Chocolate Day 🍫<br>
 I miss you ❤️
 </p>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const choice = params.get("choice");
+
+  let message = "";
+
+  if (choice === "melty") {
+    message = `
+      You chose 🫠 <b>Melty Chocolate</b><br><br>
+      You melt my heart every single time 💖
+      But you are wrong. I love you.
+    `;
+  } else if (choice === "huggy") {
+    message = `
+      You chose 🥰 <b>Huggy Chocolate</b><br><br>
+      You are my favorite place to be ❤️.
+      I miss you. My love.
+    `;
+  } else if (choice === "naughty") {
+    message = `
+      You chose 😏 <b>Naughty Chocolate</b><br><br>
+      You make me blush 💋
+    `;
+  } else {
+    message = `
+      No matter what you chose…<br><br>
+      The real answer is still <b>YOU</b> 🫶💖
+    `;
+  }
+
+  document.getElementById("message").innerHTML = message;
+</script>
 
 </body>
 </html>

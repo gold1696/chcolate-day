@@ -1,0 +1,34 @@
+body {
+  background: linear-gradient(135deg, #3b1f1f, #6b2e2e);
+  font-family: Arial, sans-serif;
+  color: white;
+  text-align: center;
+  padding: 40px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 30px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 300px;
+  margin: auto;
+}
+
+a.option {
+  text-decoration: none;
+  background: white;
+  color: #3b1f1f;
+  padding: 15px;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  transition: transform 0.2s;
+}
+
+a.option:hover {
+  transform: scale(1.05);
+}
